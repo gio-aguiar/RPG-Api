@@ -23,5 +23,11 @@ namespace RpgApi.Models.Controllers
             new Personagem() { Id = 6, Nome = "Celeborn", PontosVida=100, Forca=21, Defesa=13, Inteligencia=34, Classe=ClasseEnum.Clerigo },
             new Personagem() { Id = 7, Nome = "Radagast", PontosVida=100, Forca=25, Defesa=11, Inteligencia=35, Classe=ClasseEnum.Mago }
         }; 
+
+        public IActionResult GetFirst()
+        {
+            Personagem p = personagens[0];
+            return Ok(p);
+        }
     }
 }
